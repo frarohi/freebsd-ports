@@ -1,0 +1,25 @@
+--- src/Makefile.am.orig	2024-06-09 15:35:08 UTC
++++ src/Makefile.am
+@@ -66,8 +66,10 @@ xfce4_power_manager_CFLAGS =                    \
+ 	$(XRANDR_CFLAGS)			\
+ 	$(DPMS_CFLAGS)           		\
+ 	$(PLATFORM_CPPFLAGS)			\
+-	$(PLATFORM_CFLAGS)
++	$(PLATFORM_CFLAGS) \
++	$(LIBKEYBINDER_CFLAGS)
+ 
++
+ xfce4_power_manager_LDFLAGS =			\
+ 	-no-undefined				\
+ 	$(PLATFORM_LDFLAGS)
+@@ -85,7 +87,9 @@ xfce4_power_manager_LDADD =                     \
+ 	$(LIBNOTIFY_LIBS)                       \
+ 	$(UPOWER_LIBS)                          \
+ 	$(XRANDR_LIBS)				\
+-	$(DPMS_LIBS)
++	$(DPMS_LIBS) \
++	$(LIBKEYBINDER_LIBS)
++
+ 
+ if ENABLE_POLKIT
+ 

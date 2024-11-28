@@ -1,0 +1,21 @@
+--- src/Makefile.in.orig	2024-06-09 15:38:40 UTC
++++ src/Makefile.in
+@@ -442,6 +442,10 @@ XRANDR_VERSION = @XRANDR_VERSION@
+ XRANDR_LIBS = @XRANDR_LIBS@
+ XRANDR_REQUIRED_VERSION = @XRANDR_REQUIRED_VERSION@
+ XRANDR_VERSION = @XRANDR_VERSION@
++LIBKEYBINDER_CFLAGS = 
++LIBKEYBINDER_LIBS =  -L/usr/local/lib -lkeybinder-3.0
++LIBKEYBINDER_REQUIRED_VERSION = 
++LIBKEYBINDER_VERSION = 
+ X_CFLAGS = @X_CFLAGS@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_LIBS = @X_LIBS@
+@@ -585,6 +589,7 @@ xfce4_power_manager_LDADD = \
+ 	$(XFCONF_LIBS)                          \
+ 	$(LIBNOTIFY_LIBS)                       \
+ 	$(UPOWER_LIBS)                          \
++	$(LIBKEYBINDER_LIBS)                      \
+ 	$(XRANDR_LIBS)				\
+ 	$(DPMS_LIBS)
+ 

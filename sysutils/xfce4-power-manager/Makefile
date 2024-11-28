@@ -12,8 +12,8 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libnotify.so:devel/libnotify \
 		libupower-glib.so:sysutils/upower \
-		libharfbuzz.so:print/harfbuzz
-
+		libharfbuzz.so:print/harfbuzz \
+		libkeybinder-3.0.so:x11/keybinder-gtk3
 USES=		compiler:c11 gettext-tools gmake gnome libtool pkgconfig \
 		tar:bzip2 xfce xorg
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool
